@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 98%;
+    --foreground: 150 15% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 15% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 15% 18%;
+    --primary: 150 45% 22%;
+    --primary-foreground: 40 30% 98%;
+    --secondary: 140 20% 94%;
+    --secondary-foreground: 150 30% 20%;
+    --muted: 140 16% 93%;
+    --muted-foreground: 150 10% 45%;
+    --accent: 40 50% 55%;
+    --accent-foreground: 150 30% 18%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 140 50% 38%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 80% 50%;
+    --warning-foreground: 0 0% 100%;
+    --border: 140 14% 88%;
+    --input: 140 14% 86%;
+    --ring: 150 45% 28%;
+    --radius: 0.625rem;
+    --chart-1: 150 45% 30%;
+    --chart-2: 40 55% 50%;
+    --chart-3: 190 45% 42%;
+    --chart-4: 25 60% 55%;
+    --chart-5: 340 50% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}

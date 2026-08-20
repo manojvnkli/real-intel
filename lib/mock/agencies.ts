@@ -1,0 +1,57 @@
+import type { Agency } from '@/lib/types';
+
+export const mockAgency: Agency = {
+  id: 'agency-1',
+  name: 'EstateHub Realty',
+  logoUrl: undefined,
+  description:
+    'A premier real estate agency serving Hyderabad since 2012. We specialize in residential and commercial properties across the city.',
+  phone: '+91 40 1234 5678',
+  email: 'contact@estatehub.in',
+  website: 'estatehub.in',
+  city: 'Hyderabad',
+  ownerId: 'user-1',
+  members: [
+    {
+      id: 'mem-1',
+      userId: 'user-1',
+      fullName: 'Manoj Sharma',
+      email: 'demo@realestate.com',
+      phone: '+91 98765 43210',
+      role: 'Owner',
+      avatarUrl: 'https://images.pexels.com/photos/28442318/pexels-photo-28442318.jpeg?auto=compress&cs=tinysrgb&h=200&w=200',
+      joinedAt: '2024-01-15T10:00:00Z',
+    },
+    {
+      id: 'mem-2',
+      userId: 'user-2',
+      fullName: 'Priya Reddy',
+      email: 'priya@estatehub.in',
+      phone: '+91 98123 45678',
+      role: 'Admin',
+      avatarUrl: undefined,
+      joinedAt: '2024-02-01T10:00:00Z',
+    },
+    {
+      id: 'mem-3',
+      userId: 'user-3',
+      fullName: 'Rahul Verma',
+      email: 'rahul@estatehub.in',
+      phone: '+91 97000 12345',
+      role: 'Agent',
+      avatarUrl: undefined,
+      joinedAt: '2024-03-15T10:00:00Z',
+    },
+    {
+      id: 'mem-4',
+      userId: 'user-4',
+      fullName: 'Sneha Gupta',
+      email: 'sneha@estatehub.in',
+      phone: '+91 98000 67890',
+      role: 'Agent',
+      avatarUrl: undefined,
+      joinedAt: '2024-05-10T10:00:00Z',
+    },
+  ],
+  createdAt: '2024-01-15T10:00:00Z',
+};
